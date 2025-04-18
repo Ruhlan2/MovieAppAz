@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="genre"
+            type="com.isteam.movieappaz.domain.model.GenreUiModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@{genre.selected ? @color/red_21 : @color/white}"
+        app:cardCornerRadius="50dp"
+        app:strokeColor="@color/red_21"
+        app:strokeWidth="2dp">
+
+        <TextView
+            android:id="@+id/textView15"
+            text_res_id="@{genre.name}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/urbanist_600"
+            android:textColor="@{genre.selected ? @color/white : @color/red_21 }"
+            android:textSize="16sp" />
+    </com.google.android.material.card.MaterialCardView>
+</layout>
